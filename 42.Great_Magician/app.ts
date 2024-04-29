@@ -1,8 +1,22 @@
-// Q:42
-let mag_name: string[] = ["Harry Houdini", "Derren Brown", "Dynamo"];
+//Q:42
+let mag_name: string[] = ['Mystique Marlowe','Zephyr Zoltan','Celestia Crystal','Merlin Moonshadow','Seraphina Starlight'];
 
-function add_mag(mag_name: string[]) {
-    mag_name.splice(3, 0, "The Great");
-    console.log(mag_name);
+function make_great(mag_nameArray:string[] ){
+    for(let i=0;i<mag_nameArray.length;i++){
+       mag_name[i]="The Great " + mag_nameArray[i];
+    }
+
 }
-add_mag(mag_name);
+
+function show_mag(mag_name: string[]) {
+    mag_name.forEach(items =>{
+        console.log(items);
+    
+    });
+}
+ make_great(mag_name);
+
+show_mag(mag_name);
+
+
+import { log } from "console";

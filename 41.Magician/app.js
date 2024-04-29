@@ -1,16 +1,9 @@
-// Q:41
-var mag_name = [
-    "Harry Houdini",
-    "Hocus Pocus",
-    "Spellbinder Supreme",
-    "Amazing Alakazam",
-    "Derren Brown",
-    "Professor Presto",
-    "Dynamo",
-];
-function find_mag(mag_name) {
-    mag_name.forEach(function (mag_name) {
-        console.log(mag_name);
+"use strict";
+//Q:41
+let mag_name = ['Mystique Marlowe', 'Zephyr Zoltan', 'Celestia Crystal', 'Merlin Moonshadow', 'Seraphina Starlight'];
+function show_mag(mag_name) {
+    mag_name.forEach(items => {
+        console.log(items);
     });
 }
-find_mag(mag_name);
+show_mag(mag_name);

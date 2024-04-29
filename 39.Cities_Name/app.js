@@ -1,12 +1,14 @@
-// Q:39 Cities Name
-function city_county(city, country) {
-    console.log("".concat(city, ", ").concat(country));
+"use strict";
+//q39
+// Function to format city and country
+function city_country(city, country) {
+    return `${city}, ${country}`;
 }
-city_county("Islamabad", "Pakistan");
-city_county("Moscow", "Russia");
-city_county("Toronto", "Canada");
-city_county("Tehran", "Iran");
-city_county("Quetta", "Pakistan");
-city_county("Copenhagen", "Denmark");
-city_county("Berlin", "Germany");
-city_county("Minsk", "Belarus");
+// Call the function with city-country pairs
+const city1 = city_country('Lahore', 'Pakistan');
+const city2 = city_country('Paris', 'France');
+const city3 = city_country('New York', 'USA');
+// Print the values returned
+console.log(city1);
+console.log(city2);
+console.log(city3);

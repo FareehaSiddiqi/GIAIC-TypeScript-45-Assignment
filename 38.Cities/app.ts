@@ -1,17 +1,10 @@
-// Q:38
-function cities(city: string = "Karachi", country: string = "Pakistan") {
-
-    console.log(`${city} is in ${country}`);
-
+// Function to describe a city
+function describe_city(city: string, country: string = 'Unknown'): void {
+    console.log(`${city} is in ${country}.`);
 }
 
-cities();
-cities("Lahore");
-cities("Swat");
-cities("Quetta");
-cities("Delhi", "India");
-cities("London", "UK");
-cities("Paris", "France");
-cities("Berlin", "Greece");
-cities("Kiev", "UKraine");
-cities("Colombo", "Sri Lanka");
+// Call the function for three different cities
+describe_city('Karachi', 'Pakistan');
+describe_city('New York', 'USA');
+describe_city('Sydney'); // Without providing a country (uses default value)
+

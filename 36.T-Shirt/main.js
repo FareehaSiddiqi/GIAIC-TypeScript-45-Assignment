@@ -1,5 +1,6 @@
+"use strict";
 function make_shirt(size, message) {
-    console.log("The shirt size should be: ".concat(size, ", and must be printed with: ").concat(message));
+    console.log(`The shirt size should be: ${size}, and must be printed with: ${message}`);
 }
 make_shirt("medium", "\"Let's code the world\"");
 make_shirt("small", "\"Let's live\"");

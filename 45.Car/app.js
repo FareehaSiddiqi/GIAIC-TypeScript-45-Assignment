@@ -1,11 +1,8 @@
 "use strict";
-//Q:45 Car
-function make_car(manufacturer, model, ...options) {
-    let car = { manufacturer, model };
-    options.forEach(([key, value]) => car[key] = value);
-    return car;
+function storeCarInfo(manufacturer, modelName, ...extraOption) {
+    let carInfo = Object.assign({ manufacturer,
+        modelName }, Object.assign({}, ...extraOption));
+    return carInfo;
 }
-console.log(make_car("Toyota", "Corolla", ["color", "red"], ["year", 2022]));
-console.log(make_car("Ford", "Fiesta", ["color", "blue"], ["sunroof", true]));
-console.log(make_car("Toyota", "4Runner", ["color", "silver"], ["year", 2020]));
-console.log(make_car("Ford", "Mustang", ["color", "maroon"], ["sunroof", true]));
+let answers = storeCarInfo('Honda', 'Civic', { color: 'black' }, { features: ['navigation', 'power window'] });
+console.log(answers);

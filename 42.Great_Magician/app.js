@@ -1,7 +1,16 @@
-// Q:42
-var mag_name = ["Harry Houdini", "Derren Brown", "Dynamo"];
-function add_mag(mag_name) {
-    mag_name.splice(3, 0, "The Great");
-    console.log(mag_name);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+//Q:42
+let mag_name = ['Mystique Marlowe', 'Zephyr Zoltan', 'Celestia Crystal', 'Merlin Moonshadow', 'Seraphina Starlight'];
+function make_great(mag_nameArray) {
+    for (let i = 0; i < mag_nameArray.length; i++) {
+        mag_name[i] = "The Great " + mag_nameArray[i];
+    }
 }
-add_mag(mag_name);
+function show_mag(mag_name) {
+    mag_name.forEach(items => {
+        console.log(items);
+    });
+}
+make_great(mag_name);
+show_mag(mag_name);

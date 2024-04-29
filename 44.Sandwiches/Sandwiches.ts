@@ -1,13 +1,13 @@
-//Q:44 Sandwiches
-function make_sandwich(...item: string[]) {
-    console.log(`Making a sandwich with: ${item.join( ', ')}.`);   
+//Q44
+import { log } from "console";
+
+function make_sandwich(item :string[]){
+    console.log("\nMaking Your sandwich with:");
+    item.forEach(element => console.log("."+ element ));
+    console.log('Enjoy your sandwich!\n');
+
 }
-make_sandwich("chicken", "cheese")
-make_sandwich("deli meat", "lettuce", "tomato")
-make_sandwich("mayonnaise", "mustard", "Olives", "Avocado")
-make_sandwich("beef", "cheese")
-make_sandwich("Cucumber", "lettuce", "tomato")
-make_sandwich("mayonnaise", "cucumber", "Olives", "Avocado")
-make_sandwich("Mutton", "cheese")
-make_sandwich("beef meat", "lettuce", "mustard")
-make_sandwich("mayonnaise", "jalapeno", "Olives", "Avocado")
+make_sandwich(['ham','cheese','lettuce']);
+make_sandwich(['turkey','bacon']);
+make_sandwich(['peanut butter','jelly']);
+

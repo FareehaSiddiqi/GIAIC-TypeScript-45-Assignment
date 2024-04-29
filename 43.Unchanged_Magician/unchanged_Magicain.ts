@@ -1,22 +1,31 @@
-function make_great(magicians: string[]): string[] 
-{ // Make a copy of the array
-    const greatMagicians = [...magicians];    
-    // Add "the Great" to each magician's name
-    for (let i = 0; i < greatMagicians.length; i++) 
-    {greatMagicians[i] += " the Great";}
-    return greatMagicians;
+let mag_name: string[] = ['Mystique Marlowe','Zephyr Zoltan','Celestia Crystal','Merlin Moonshadow','Seraphina Starlight'];
+
+//copyarray
+function copyArray(arr: string[]){
+    return[...arr]
 }
 
-function show_magicians_with_title(magicians: string[]): void 
-{for (const magician of magicians) 
-    {console.log(magician);}
+//original array
+function make_great(mag_nameArray:string[] ){
+    for(let i=0;i<mag_nameArray.length;i++){
+        mag_nameArray[i]="The Great " + mag_nameArray[i];
+    }
+
 }
 
-const magiciansOriginal: string[] = ["Harry Houdini", "Raven The illusionist", "David Copperfield", "Professor Pestro", "Penn Jillette", "Teller"];
-const greatMagicians: string[] = make_great(magiciansOriginal);
+function show_mag(mag_name: string[]) {
+    mag_name.forEach(items =>{
+        console.log(items);
+    
+    });
+}
+const copyMag_nameArray = copyArray(mag_name);
 
-console.log("Original Magicians:");
-show_magicians_with_title(magiciansOriginal);
+make_great(copyMag_nameArray); 
 
-console.log("\nGreat Magicians:");
-show_magicians_with_title(greatMagicians);
+console.log('\n\nthis is my original array');
+show_mag(mag_name);
+
+console.log('\n\nthis is my modified copy of array:')
+show_mag(copyMag_nameArray);
+
